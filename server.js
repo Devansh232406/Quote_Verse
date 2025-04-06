@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 app.use(express.static('public'));
-const PORT=8080;
+const PORT = process.env.PORT || 8080;
 const quotes=[
     "Sometimes all it needs is a simple spark to vanish the darkest nights",
     "Die as a hero or live long enough to see yourself..become a Villain",
