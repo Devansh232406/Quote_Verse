@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body{
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;           /* make it full screen height */
+    width: 100%;             /* optional: make it full width */
+ 
+}
+ h1{
+        color: rgb(228, 228, 228);
+        animation: slideIn 1s ease forwards;
+    }
+
+button{
+    padding: 1%;
+    border-radius: 19px;
+    border: 0cm;
+    transition: all 0.3s ease-in;
+
+}
+button:hover{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    transform: scale(1.05);
+}
+
+.output-box {
+    width: 300px;
+    min-height: 100px;
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin:5%;
+    transform: scale(0.9);
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 0.5s; /* Delay before the fade-in effect starts */
+    animation-fill-mode: forwards; /* Keep the final state of the animation */
+    animation-name: fadeIn, slideIn; /* Combine both animations */
+    animation-duration: 0.5s, 0.5s; /* Duration for both animations */
+    animation-delay: 0.5s, 0.5s; /* Delay for both animations */
+    animation-fill-mode: forwards, forwards; /* Keep the final state of both animations */
+    animation-timing-function: ease, ease; /* Timing function for both animations */
+    animation-direction: normal, normal; /* Direction for both animations */
+    animation-iteration-count: 1, 1; /* Run both animations once */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}    
+.output-box.show {
+    opacity: 1;
+    transform: scale(1);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
